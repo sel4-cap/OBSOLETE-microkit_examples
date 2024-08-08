@@ -31,6 +31,7 @@ void handle_keypress(void) {
     while(true) {
         while (uboot_stdin_tstc() > 0) {
             char c = uboot_stdin_getc();
+            printf("Received character: %c\n", c, stdout);
             microkit_ppcall(5, seL4_MessageInfo_new((uint64_t) c,1,0,0));
             udelay(10000);
         }
