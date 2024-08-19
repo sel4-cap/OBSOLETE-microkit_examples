@@ -29,7 +29,7 @@
     <memory_region name="spi_0_mem" size="0x10000" phys_addr="0x30820000"/>
     <memory_region name="timer_mem" size="0x20000" phys_addr="0x306c0000"/>
     
-    <protection_domain name="uboot-driver-example" priority="254">
+    <protection_domain name="uboot-driver-example" priority="254" stack_size="0x4000">
         <map mr="timer_reg_mem" vaddr="0x306a0000" perms="rw" cached="false"/>
         <map mr="clock-controller_mem" vaddr="0x30380000" perms="rw" cached="false"/>
         <map mr="iomuxc_mem" vaddr="0x30330000" perms="rw" cached="false" />
